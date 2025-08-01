@@ -8,7 +8,7 @@ const InternNavbar = () => {
         <h1 className="text-3xl font-semibold text-blue-400">Internshala</h1>
       </div>
       <div>
-        <ul className="flex flex-row gap-8 items-center">
+        <ul className="hidden md:flex flex-row gap-8 items-center">
           <li className="font-sans font-medium text-lg bg-blue-100 rounded-lg p-2 text-blue-500 shadow-sm">
             home
           </li>
