@@ -10,7 +10,10 @@ connectDb();
 
 const app = express();
 app.use(express.json());
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://internshala3.vercel.app",
+];
 app.use(
   cors({
     origin: allowedOrigins,
