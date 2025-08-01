@@ -1,11 +1,23 @@
 import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+
+import registrationRouter from "./Routes/registartionRouter.js";
+import codeRouter from "./Routes/codeRouter.js";
+import connectDb from "./Config/mongooseConnection.js";
+connectDb();
 
 const app = express();
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+const allowedOrigins = ["http://localhost:5173"];
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+);
+app.use("/", registrationRouter);
+app.use("/code", codeRouter);
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });

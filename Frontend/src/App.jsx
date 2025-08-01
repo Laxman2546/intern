@@ -1,12 +1,17 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Loginpage from "./Pages/Loginpage.jsx";
+import Internhome from "./Pages/Internhome.jsx";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Loginpage />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Loginpage />} />
+        <Route path="/internhome" element={<Internhome />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </div>
   );
 };
 
