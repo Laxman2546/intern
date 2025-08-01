@@ -1,10 +1,12 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Loginpage from "./Pages/Loginpage.jsx";
 
 const App = () => {
   return (
-    <div>
-      <h1>hello bache</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Loginpage />} />
+    </Routes>
   );
 };
 
