@@ -19,6 +19,10 @@ app.use(
     origin: allowedOrigins,
   })
 );
+app.get("/waking", (req, res) => {
+  res.send("Waking backend server");
+  return res.status(200).json({ success: "waking backend server" });
+});
 app.use("/", registrationRouter);
 app.use("/code", codeRouter);
 app.listen(3000, () => {

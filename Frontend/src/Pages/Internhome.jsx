@@ -22,6 +22,17 @@ const Internhome = () => {
     }
   }, [username]);
 
+  useEffect(() => {
+    wakingBackend();
+  }, []);
+
+  const wakingBackend = async () => {
+    const waking = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/waking`
+    );
+    console.log(waking.data);
+  };
+
   const getCode = async (name) => {
     setLoading(true);
     try {
