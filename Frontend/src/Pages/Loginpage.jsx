@@ -15,6 +15,15 @@ const Loginpage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    wakingBackend();
+  }, []);
+
+  const wakingBackend = async () => {
+    const waking = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/waking`
+    );
+  };
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
