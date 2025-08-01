@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomeImg from "../assets/login.svg";
 import FbImg from "../assets/fb.png";
 import google from "../assets/google.jpg";
