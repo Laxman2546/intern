@@ -59,7 +59,7 @@ root/
 git clone https://github.com/Laxman2546/intern
 ```
 
-### 3. Setup Frontend
+### 2. Setup Frontend
 
 ```bash
 cd Frontend
@@ -77,12 +77,16 @@ echo > .env
 
 Add this to your `.env` file:
 
-```Backend env sample
+Backend env sample:
+
+```
 MONGODB_URL= "mongodb+srv://<username>:<password>@intern.7y461c9.mongodb.net/?retryWrites=true&w=majority&appName=INTERN"
 PORT=3000
 ```
 
-```Frontend env sample
+Frontend env sample:
+
+```
 VITE_BACKEND_URL=http://localhost:3000
 ```
 
@@ -107,9 +111,3 @@ Backend deploy on <a href="https://render.com/" target="_blank" rel="noopener no
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-```
-
-```
