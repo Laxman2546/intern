@@ -25,6 +25,7 @@ app.get("/waking", (req, res) => {
 });
 app.use("/", registrationRouter);
 app.use("/code", codeRouter);
+const port = process.env.PORT || 3000;
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
